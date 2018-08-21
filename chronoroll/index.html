@@ -4,37 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>chrono roll</title>
-    <script src="//cdn.steemjs.com/lib/latest/steem.min.js"></script>
+    <title>Chrono Roll</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="http://7luck88.com/themes/bootstrap3/vendors/odometer/themes/odometer-theme-default.css" />
     <script src="//cdn.steemjs.com/lib/latest/steem.min.js"></script>
+    <link rel="stylesheet" href="stile.css">
+    <style>
+    .relog{
+        line-height: 200px; 
+        width: 200px; 
+        height: 200px;
+        background-color:#6F1DAF;
+    }
+    .bg-ttc{
+        background-color: #6F1DAF!important;
+    }
+    .btn-ttc{
+        color: rgb(255, 255, 255);
+        background-color: #6F1DAF;
+    }
+    .btn-ttc:hover{
+        color: rgb(255, 255, 255);
+        background-color: #3E0A66;
+    }
+    .btn-ttc:active {
+        color: rgb(255, 255, 255);
+
+    }
+    .alert-ttc {
+        color: #280C3D;
+        background-color: #D49CFE;
+        border-color: #D49CFE;
+    }
+    </style>
 </head>
-<!--d-none -->
 <body class="container">
     <div class="card">
-        <h5 class="card-header bg-primary text-white">
+        <h5 class="card-header bg-ttc text-white">
             <center>ChronoRoll</center>
         </h5>
         <div class="card-body">
             <div>
                 <div class="row">
                     <div class="col-4">
+                        <div id="busqueuser" class="d-none card text-center" >
+                            <input type="text" class="form-control" id="buqueuser" placeholder="Username">
+                            </br>
+                            <center>
+                                <button type="button" class="btn btn-ttc" onclick="infouser();">Submit</button>
+                            </center>
+                        </div>
                         <div id="perfilpr" class="d-none card text-center">
                             <div class="card-body">
                                 <h5 class="card-title" id="perfil">username</h5>
                                 <img id="imgperfil" src="https://steemitimages.com/512x512/https://steemitimages.com/DQmb2HNSGKN3pakguJ4ChCRjgkVuDN9WniFRPmrxoJ4sjR4" style="width: 75px; height: 75px; padding: 5px;" class="rounded-circle">
                                 <br />
-                                <a href="/" class="btn btn-primary">logout</a>
+                                <a href="/" class="btn btn-ttc">logout</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
                         <center>
-                            <div class="rounded-circle text-white" id="ant" style="line-height: 200px;width: 200px;height: 200px;background-color:#007bff;">
+                            <div class="rounded-circle text-white" id="ant" style="line-height: 200px;width: 200px;height: 200px;background-color:#6F1DAF;">
                                 <h1 id="odometer">click roll</h1>
                             </div>
                         </center>
@@ -54,7 +87,7 @@
                     <div class="input-group col-5">
                         <input type="number" id="amountsteem" class="form-control" max="50" min="0.1" onchange="porcent();cammbion()" value="0.1">
                         <div class="input-group-append">
-                            <button class="input-group-addon btn btn-primary" onclick="x2();cammbion()">x2</button>
+                            <button class="input-group-addon btn btn-ttc" onclick="x2();cammbion()">x2</button>
                         </div>
                     </div>
                     <div class="input-group col-5">
@@ -73,23 +106,23 @@
                 <br />
                 <div class="row">
                     <div class="col-10">
-                        <div id="ms" class="alert alert-primary">
+                        <div id="ms" class="alert alert-ttc ">
                             If you have the winning number, you will receive 0.196 STEEM
                         </div>
                         
                     </div>
                     <div class="col-2">
-                        <button type="button" id="coinmoney" onclick="cambiomoneda()" class="btn btn-primary btn-lg btn-block">STEEM</button>
+                        <button type="button" id="coinmoney" onclick="cambiomoneda()" class="btn btn-ttc btn-lg btn-block">STEEM</button>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-10">
-                            <input class="btn btn-primary col-12" id="rolval" type="submit" onclick="numero()" value="Roll">
+                            <input class="btn btn-ttc col-12" id="rolval" type="submit" onclick="numero()" value="Roll">
                     </div>
                         
                     <div class="col-2">
-                            <input class="btn btn-primary col-12" id="steemconnectV" type="submit" onclick="steemconnect()" value="steemconnect">
+                            <input class="btn btn-ttc col-12" id="steemconnectV" type="submit" onclick="steemconnect()" value="steemconnect">
                     </div>
                         
                 </div>
@@ -100,7 +133,7 @@
             <thead>
                 <tr>
                     <th scope="col">Block</th>
-                    <th scope="col">Number</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Percentage</th>
                     <th scope="col">Result</th>
                 </tr>
@@ -118,7 +151,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content ">
                 <div class="d-none" id="tplol">
-                    <div class="alert alert-primary" id="mensaje" role="alert">
+                    <div class="alert alert-ttc " id="mensaje" role="alert">
                      
                     </div>
                 </div>
@@ -132,7 +165,7 @@
                         <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
                     
-                    <button onclick="auten()" class="btn btn-primary">Sign in</button>
+                    <button onclick="auten()" class="btn btn-ttc">Sign in</button>
                     <button class="btn btn-dark" data-dismiss="modal" id="cerrar" aria-label="Close" >close</button>
                 </div>
             </div>
@@ -143,7 +176,6 @@
 
 </body>
 <script type="text/javascript">
-
     var conecionweb='https://rpc.buildteam.io'
     steem.config.set('websocket',conecionweb);
     sesion()
@@ -156,19 +188,68 @@
     var wif=""
     var to="chronoroll"
     var steemc=false
+    var hg=false
+    function invesdata(){
+        hg=true
+        if(hg==true){
+            document.getElementById("steemconnectV").disabled=true
+        }
+        steem.api.getAccounts([user],(err,result)=>{
+            var json=JSON.parse(result[0].json_metadata)
+            if(json.profile.profile_image===undefined){
+                document.getElementById("imgperfil").src="https://steemitimages.com/512x512/https://steemitimages.com/DQmb2HNSGKN3pakguJ4ChCRjgkVuDN9WniFRPmrxoJ4sjR4"
+            }
+            else{
+                document.getElementById("imgperfil").src=json.profile.profile_image;
+            }
+            document.getElementById("perfil").innerHTML=result[0].name
+            document.getElementById("steemcan").innerHTML=result[0].balance;
+            document.getElementById("sbdcan").innerHTML=result[0].sbd_balance
+                            
+            setInterval(function(){
+                steem.api.getAccounts([u],(err,resty)=>{
+                    var sasteem=parseFloat(document.getElementById("steemcan").value)
+                    var sasbd=parseFloat(document.getElementById("sbdcan").value)
+                    if(parseFloat(resty[0].balance)!=sasteem || parseFloat(resty[0].sbd_balance)!=sasbd){
+                        document.getElementById("steemcan").innerHTML=resty[0].balance
+                        document.getElementById("sbdcan").innerHTML=resty[0].sbd_balance
+                    }
+                })
+            }, 1000);
+        })
+        var ty=document.getElementById("perfilpr")
+        var sal=document.getElementById("saldos")
+        sal.className ="card text-center"
+        ty.className ="card text-center"
+
+        tabladato()
+
+    }
+    function infouser(){
+        var userstencot=document.getElementById("buqueuser").value
+        if(userstencot){
+                user=userstencot
+                var du=document.getElementById("busqueuser")
+                du.className="d-none"
+                invesdata()
+        }
+    }
     function sesion(){
         if(ses!=true){
             document.getElementById("rolval").disabled=true;
             document.getElementById("ant").innerHTML=
-            "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal'>"+
+            "<button type='button' class='btn btn-ttc' data-toggle='modal' data-target='#exampleModal'>"+
             'join'+
             "</button>";
         }else{
             if(steemc==true){
+                var ct=document.getElementById("busqueuser")
+                ct.className=""
                 document.getElementById("rolval").disabled=false;
                 document.getElementById("ant").innerHTML="<p id='odometer'>click roll</p>"
             }
             else{
+                document.getElementById("steemconnectV").disabled=true
                 document.getElementById("rolval").disabled=false;
                 document.getElementById("ant").innerHTML="<p id='odometer'>click roll</p>"
                 var ty=document.getElementById("perfilpr")
@@ -272,7 +353,7 @@
             window.open(dato, "steemconnect","width="+altura+",height="+anchura+",top="+y+",left="+x)
         }else{
             steem.broadcast.transfer(wif, user, to, cani, memo, function(erroretd, resultadod) {
-                console.log(erroretd, resultadod);
+               
             });
         }
         
@@ -340,18 +421,19 @@
         var blocktest=[]
         setInterval(function testtabla(){
             steem.api.getAccountHistory(user, -1, 50, (err, result) => {
+                console.log("entro")
             var transfers = result.filter( tx => tx[1].op[0] =='transfer' && tx[1].op[1].to==to || tx[1].op[0]=='transfer' && tx[1].op[1].from==to)
-            
             transfers.map(function(ele){
-                
                 if(ele[1].op[1].from===to){
-                    console.log("entroen punto1")
                     var memofrom=ele[1].op[1].memo
+                    var positionm=memofrom.indexOf(";")
+                    var men=memofrom.substring(0,positionm)
                     //{"block":xxxx,"result":"victori","numeroresult":x}
                     if(blocktest.includes(ele[1].block)==false){
-                        if(IsJsonString(memofrom)==true){
+
+                        if(IsJsonString(men)==true){
                             blocktest.push((ele[1].block))
-                            var json2=JSON.parse(memofrom)
+                            var json2=JSON.parse(men)
                             var datot=document.getElementById(json2.block).innerHTML
                             document.getElementById(json2.block).innerHTML=datot+"<td>"+json2.result+"</td>"
 
@@ -360,14 +442,14 @@
                 }
                 
                 if(ele[1].op[1].to===to){
-                    console.log("entroen punto2")
+                    
                     ele[1].op[1].amount//cantidad enviada
                     var dating=ele[1].op[1].memo
                     if(blocktest.includes(ele[1].block)==false){
                         if(IsJsonString(dating)==true){
                             blocktest.push((ele[1].block))
                             var json1=JSON.parse(dating)
-                            var resuldatotopush="<tr id="+ele[1].block+">"+"<td>"+ele[1].block+"</td>"+"<td>"+json1.number+"</td>"+"<td>"+json1.porcent+"</td>"+"</tr>"
+                            var resuldatotopush="<tr id="+ele[1].block+">"+"<td>"+ele[1].block+"</td>"+"<td>"+json1.type+"</td>"+"<td>"+json1.possibility+"</td>"+"</tr>"
                             var daytabla=document.getElementById("props").innerHTML
                             document.getElementById("props").innerHTML=daytabla+resuldatotopush
                         }
