@@ -1,4 +1,4 @@
-
+<script src="https://unpkg.com/dsteem@^0.8.0/dist/dsteem.js"></script>
 
 
     var rpcnodes=[
