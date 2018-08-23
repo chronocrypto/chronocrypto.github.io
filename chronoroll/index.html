@@ -277,19 +277,19 @@
         var porcentactuldinput=(document.getElementById("porcenta").value)/100
         if(cantidad<0.1){
             document.getElementById("amountsteem").value=0.1
-            var amount=(0.098*1*cantidad)/(0.1*porcentactuldinput)
+            var amount=(0.080*1*cantidad)/(0.1*porcentactuldinput)
             var al=amount.indexOf(".")
             var menssage="If you have the winning number, you will receive "+amount.toFixed(3)+" "+coin
             document.getElementById("ms").innerHTML=menssage
         }
         else if(cantidad>5){
             document.getElementById("amountsteem").value=5
-            var amount=(0.098*1*cantidad)/(0.1*porcentactuldinput)
+            var amount=(0.080*1*cantidad)/(0.1*porcentactuldinput)
             var menssage="If you have the winning number, you will receive "+amount.toFixed(3)+" "+coin
             document.getElementById("ms").innerHTML=menssage
         }
         else {
-            var amount=(0.098*1*cantidad)/(0.1*porcentactuldinput)
+            var amount=(0.080*1*cantidad)/(0.1*porcentactuldinput)
             var menssage="If you have the winning number, you will receive "+amount.toFixed(3)+" "+coin
             document.getElementById("ms").innerHTML=menssage
         }
@@ -303,7 +303,7 @@
     function porcent(){
         var por=document.getElementById("porcenta").value
         var saldop=document.getElementById("amountsteem").value
-        var tyd=(saldop*0.98*0.1)/0.025
+        var tyd=(saldop*0.80*0.1)/0.025
         if(tyd>99.99){
             tyd=tyd/10
         }
